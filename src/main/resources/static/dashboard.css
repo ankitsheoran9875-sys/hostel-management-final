@@ -1,12 +1,20 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin:0%;
+    padding:0%;
 }
 
-html, body{
+html , body{
+    /* height: 100%;
+     width: 100%;
+     box-sizing: border-box; */
+
     min-height: 100vh;
     width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
     background-color: gold;
 }
 
@@ -18,6 +26,7 @@ html, body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: gold;
 }
 
 /* ===== ROW STRUCTURE (DESKTOP) ===== */
@@ -126,7 +135,7 @@ html, body{
 }
 
 /* ========================= */
-/* MOBILE RESPONSIVE FIX */
+/* 📱 MOBILE RESPONSIVE FIX */
 /* ========================= */
 
 @media (max-width: 768px) {
