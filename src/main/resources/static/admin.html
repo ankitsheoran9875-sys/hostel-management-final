@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Dashboard</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="/admin.css">
+</head>
+<body>
+
+
+<div class="container">
+
+  <h2>Admin Dashboard</h2>
+
+  <h3>Welcome, <span id="adminName"></span></h3>
+
+  <button onclick="loadCount()">Check Lunch Count</button>
+
+  <h3>Total Registrations: <span id="count"></span></h3>
+
+  <button onclick="logout()">Logout</button>
+
+</div>
+
+
+
+
+<div id="listBox" class="list-box">
+  <h3>Registered Students</h3>
+
+  <table border="1" id="lunchTable">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Room</th>
+        <th>College</th>
+        <th>Taken</th>
+        <th>Returned</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <button onclick="loadStudents()">Load List</button>
+</div>
+
+
+  <div class="add-student-box">
+
+  <h3>Add Student</h3>
+
+  <input type="text" id="newUsername" placeholder="username like ankit@101">
+
+  <input type="password" id="newPassword" placeholder="password">
+
+  <input type="text" id="newCollege" placeholder="College Name">
+  
+  <button onclick="addStudent()">Add Student</button>
+
+  </div>
+
+
+<script src="/admin.js"></script>
+
+</body>
+</html>

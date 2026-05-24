@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Record</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="/student.css">
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>Welcome, <span id="userDisplay"></span></h1>
+
+  <form class="form-box" onsubmit="return validateForm()">
+
+    <label>Name</label>
+    <input type="text" id="name" readonly>
+
+    <label>Room</label>
+    <input type="text" id="room" readonly>
+    
+  </form>
+
+<button onclick="logout()">Logout</button>
+  <a href="/index.html" class="back-btn">⬅ Back to Home</a>
+
+</div>
+    <script src="/student.js"> </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Room Facility</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="/room.css">
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>Room Facility</h1>
+
+  <form class="form-box" onsubmit="return validateRoomForm()">
+
+    <label>Room Number</label>
+    <input type="text" id="room" placeholder="Enter room number">
+
+    <label>Room Type</label>
+    <select>
+      <option>Single</option>
+      <option>Double</option>
+      <option>Triple</option>
+    </select>
+
+    <label>Last Cleaned Date</label>
+    <input type="date">
+
+    <label>Maintenance Status</label>
+    <select>
+      <option>Good</option>
+      <option>Needs Repair</option>
+      <option>Under Maintenance</option>
+    </select>
+
+    <label>Requirements / Issues</label>
+    <textarea placeholder="Write any issues (fan, light, water, etc.)"></textarea>
+
+    <button type="submit">Save</button>
+
+  </form>
+
+  <a href="index.html" class="back-btn">⬅ Back to Home</a>
+
+</div>
+<script src="/room.js"></script>
+</body>
+</html>

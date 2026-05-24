@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lunch Registration</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="/lunch.css">
+</head>
+<body>
+
+<div class="container">
+
+  <h2>Lunch Registration</h2>
+
+  <h3>Welcome, <span id="userDisplay"></span></h3>
+
+  <label>Name</label>
+  <input type="text" id="name" readonly>
+
+  <label>Room</label>
+  <input type="text" id="room" readonly>
+
+  <label>College</label>
+  <input type="text" id="college" readonly>
+
+  <button id="registerBtn" onclick="registerLunch()">Register Lunch</button>
+</div>
+  <a href="/index.html" class="back-btn">⬅ Back to Home</a>
+  
+  <div id="lunchDetails" class="details-box" style="display:none;">
+  <h3>Lunch Details</h3>
+
+  <p><strong>Status:</strong> <span id="status"></span></p>
+  <p><strong>Date:</strong> <span id="date"></span></p>
+  <p><strong>Name:</strong> <span id="dName"></span></p>
+  <p><strong>Room:</strong> <span id="dRoom"></span></p>
+</div>
+
+<script src="/lunch.js"></script>
+
+</body>
+</html>
