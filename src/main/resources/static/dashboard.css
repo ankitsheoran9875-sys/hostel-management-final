@@ -1,130 +1,133 @@
-*{
-    margin:0%;
-    padding:0%;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-html , body{
-     height: 100%;
-     width: 100%;
-     box-sizing: border-box;
-}
-.main{
+
+html, body {
     height: 100%;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: gold;
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
 }
-.firsttwo{
-    display: flex;
-    transform: rotate(45);
-} 
-.lasttwo{
-    display: flex;
-}
-.square12 , .square34{
-    display: flex;
-    height: 160px;
-    width: 160px;
 
-    align-items: center;
-    justify-content: center;
+/* HEADER */
+#topheading {
+    padding: 15px;
     text-align: center;
-
-    transform: rotate(45deg);
-    overflow: hidden;
-}
-#square1:hover ,#square2:hover, #square3:hover, #square4:hover{
-            background-color: burlywood;
-}
-#topheading:hover{
-    background-color:purple;
-}
-#square1{
-    background-color: brown;
-    margin-right: 30px; margin-bottom: 30px;
-}
-#square2{
-    background-color: blue;
-     margin-left: 30px; margin-bottom: 30px;
-}
-#square3{
-    background-color: chartreuse;
-      margin-right: 30px; margin-top: 30px;
-}
-#square4{
-    background-color: rgb(255, 125, 3);
-      margin-left: 30px; margin-top: 30px;
-}
-h1{
-    transform: rotate(-45deg);
-    font-size: 20px;
-}
-#topheading{
-    padding: 10px;
-   /* background-color: rgb(255, 0, 191); */
-   background: linear-gradient(to right, #afff10,#00ddff);
-    text-align: center;   
-    border-width: 10px;
-    border-style:solid;
-    border-color: rgb(164, 2, 251);
-}
-
-.box {
-  display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 100%;
-    height: 100%;
-
-    color: black;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    color: white;
+    font-size: 22px;
     font-weight: bold;
-    text-decoration: none;
-
-    transform: rotate(-45deg);
-
-    padding: 10px;
-    text-align: center;
-    word-break: break-word;
+    border-bottom: 4px solid #003c8f;
 }
 
-.box span {
-  transform: rotate(-45deg);
-}
-
+/* LOGOUT */
 .logout-container {
     display: flex;
     justify-content: center;
-    margin-bottom: 0px; /* Controls space between button and grid below */
-    background-color: rgb(0, 0, 0);
+    padding: 15px;
+    background: #111;
 }
 
-/* Optional: Make the logout button look clean */
 .logout-container button {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    background-color: #ff1900;
+    background-color: #ff3b30;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
+    transition: 0.3s;
 }
 
 .logout-container button:hover {
-    background-color: #c0392b; 
+    background-color: #c0392b;
 }
 
+/* MAIN LAYOUT */
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 30px;
+}
+
+/* ROWS */
+.firsttwo,
+.lasttwo {
+    display: flex;
+    gap: 30px;
+}
+
+/* BOXES */
+.square12,
+.square34 {
+    width: 180px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(45deg);
+    border-radius: 15px;
+    transition: 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* COLORS */
+#square1 { background: #ff6b6b; }
+#square2 { background: #4dabf7; }
+#square3 { background: #51cf66; }
+#square4 { background: #ffa94d; }
+
+/* HOVER EFFECT */
+#square1:hover,
+#square2:hover,
+#square3:hover,
+#square4:hover {
+    transform: rotate(45deg) scale(1.05);
+    filter: brightness(1.1);
+}
+
+/* LINKS INSIDE BOX */
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    transform: rotate(-45deg);
+    padding: 10px;
+    word-break: break-word;
+}
+
+/* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
-    .firsttwo, .lasttwo {
-        flex-direction: column;
-        align-items: center;
+
+    .main {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
 
-    .square12, .square34 {
-        margin: 15px 0;
+    .firsttwo,
+    .lasttwo {
+        display: contents;
+    }
+
+    .square12,
+    .square34 {
         width: 140px;
         height: 140px;
+    }
+
+    #topheading {
+        font-size: 18px;
     }
 }
